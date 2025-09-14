@@ -1,3 +1,106 @@
+🗳️ Voting App
+Project Overview
+
+Voting App is a full-stack web application that allows users to create polls, vote on multiple options, and view live results in real-time. The frontend is built using Angular, and the backend is powered by Spring Boot (Java) with a MySQL database.
+
+🚀 Features
+
+Create polls with multiple options dynamically.
+
+View a list of all available polls.
+
+Vote on poll options.
+
+See updated vote counts immediately after voting.
+
+Reset and manage poll options.
+
+RESTful API design for clean frontend-backend interaction.
+
+⚡ Technologies Used
+
+Frontend: Angular, TypeScript, HTML, CSS
+
+Backend: Spring Boot, Java, REST API
+
+Database: MySQL
+
+Version Control: Git, GitHub
+
+🔧 Installation & Setup
+Backend
+
+Clone the repository:
+git clone https://github.com/Steja25/Voting_App.git
+
+Navigate to backend directory.
+
+Configure MySQL in application.properties.
+
+Run Spring Boot application:
+mvn spring-boot:run
+
+Frontend
+
+Navigate to the Angular project directory (poll-app).
+
+Install dependencies:
+npm install
+
+Run the Angular app:
+ng serve
+
+⚡ API Endpoints
+
+POST /api/polls — Create a new poll.
+
+GET /api/polls — Retrieve all polls.
+
+POST /api/polls/vote — Vote for a specific poll option.
+
+📝 Example Poll JSON
+{
+  "question": "What is your favourite programming language?",
+  "options": [
+    { "optionText": "Java", "voteCount": 0 },
+    { "optionText": "Python", "voteCount": 0 },
+    { "optionText": "C++", "voteCount": 0 },
+    { "optionText": "JavaScript", "voteCount": 0 }
+  ]
+}
+
+📂 Folder Structure
+Voting_App/
+├── poll-app/               # Angular frontend
+├── src/main/java/...       # Spring Boot backend source code
+├── pom.xml                 # Maven configuration
+├── application.properties  # Backend config file
+└── README.md               # Project documentation
+
+✅ Notes
+
+Ensure CORS is enabled on the backend for smooth frontend-backend communication.
+
+Vote count is managed automatically by the backend.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # PollApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
