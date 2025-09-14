@@ -1,0 +1,28 @@
+package com.voting.voting_app.model;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Generated;
+import lombok.NoArgsConstructor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+
+public class Poll {
+@Id
+@GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Long id;
+    private  String question;
+    @ElementCollection
+    private List<OptionVote> options=new ArrayList<>();
+//    @ElementCollection
+//    private List<Long> votes=new ArrayList<>();
+
+
+}
